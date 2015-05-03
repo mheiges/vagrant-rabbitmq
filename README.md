@@ -2,7 +2,7 @@
 
 ### About
 
-This box contains vagrant and puppet recipes for creating a system with RabbitMQ and RabbitMQ Web Management.
+This box contains vagrant and puppet recipes for creating a CentOS 6 system with RabbitMQ and RabbitMQ Web Management.
 
 
 ### Install
