@@ -6,11 +6,12 @@ Vagrant.configure('2') do |config|
 	config.vm.network :forwarded_port, guest: 5672, host: 5672
 	config.vm.network :forwarded_port, guest: 15672, host: 15672
 
-  config.vm.provision :shell, :inline => "yum clean all"
+  config.vm.provision :shell, :inline => 'yum clean all'
 
 	config.vm.provision :puppet do |puppet|
 	  puppet.manifests_path = 'puppet/manifests'
-	  puppet.hiera_config_path = "puppet/hiera.yaml"
+	  puppet.manifest_file = ''
+	  puppet.hiera_config_path = 'puppet/hiera.yaml'
     puppet.module_path = 'puppet/modules'
   end
   
