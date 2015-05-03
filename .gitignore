@@ -1,0 +1,4 @@
+.*
+!.git*
+puppet/modules/*
+
