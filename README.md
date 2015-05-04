@@ -9,9 +9,8 @@ This box contains vagrant and puppet recipes for creating a CentOS 6 system with
 
 * Download and install [Vagrant](https://www.vagrantup.com/downloads.html)
 * Download and install  [VirtualBox](https://www.virtualbox.org/wiki/Downloads)
-* Clone the project ```git clone --recursive git@github.com:mheiges/vagrant-rabbitmq.git```
+* Clone the project ```git clone git@github.com:mheiges/vagrant-rabbitmq.git```
 * In the project dir run ```vagrant up```
-
 
 ### Installed Services
 
