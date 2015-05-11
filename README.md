@@ -24,3 +24,15 @@ port: 5672
 url: http://localhost:15672/  
 username: guest  
 password: guest  
+
+
+#### Puppet
+
+Puppet manifests are applied during `vagrant provision`. To manually apply manifests on the VM, run:
+
+    sudo puppet apply --modulepath=/vagrant/puppet/modules/forge:/vagrant/puppet/modules/custom  /vagrant/puppet/manifests/default.pp
+
+To view currently enabled RabbitMQ plugins, run on the VM:
+
+    sudo puppet resource rabbitmq_plugin --modulepath=/vagrant/puppet/modules/forge:/vagrant/puppet/modules/custom
+
