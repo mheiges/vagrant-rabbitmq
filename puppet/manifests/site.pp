@@ -3,10 +3,15 @@ node 'rabbitmq' {
   class { 'erlang': epel_enable => true}
 
   class { '::rabbitmq':
+    repos_ensure      => true,
+    version           => '3.5.1-1',
     service_manage    => true,
     port              => '5672',
     delete_guest_user => false,
     admin_enable      => true,
+    config_variables  => {
+      loopback_users => '[]'
+    }
   }
 
   Class['erlang'] -> Class['rabbitmq']
