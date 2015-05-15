@@ -12,6 +12,10 @@ This box contains vagrant and puppet recipes for creating a CentOS 6 system with
 * Clone the project ```git clone git@github.com:mheiges/vagrant-rabbitmq.git```
 * In the project dir run ```vagrant up```
 
+Optionally, the VM will use the `vagrant-hostmanager` plugin if it is installed.
+
+    vagrant plugin install vagrant-hostmanager
+
 ### Installed Services
 
 #### RabbitMQ
