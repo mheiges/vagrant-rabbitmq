@@ -6,6 +6,7 @@ Vagrant.configure('2') do |config|
   if Vagrant.has_plugin?('vagrant-hostmanager')
     config.hostmanager.enabled = true
     config.hostmanager.manage_host = true
+    config.hostmanager.ignore_private_ip = false
     config.hostmanager.include_offline = true
   end
 
@@ -13,7 +14,7 @@ Vagrant.configure('2') do |config|
 
     config.vm.hostname = 'rabbitmq'
 
-    config.vm.network :private_network, type: 'static', ip: '10.0.0.2'
+    config.vm.network :private_network, type: 'static', ip: '10.1.1.2'
     config.vm.network :forwarded_port, guest: 5672, host: 5672, auto_correct: true
     config.vm.network :forwarded_port, guest: 15672, host: 15672, auto_correct: true
 
